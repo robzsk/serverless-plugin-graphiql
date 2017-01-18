@@ -2,6 +2,7 @@
 
 > Creates http endpoints for graphql server with graphiql
 
+[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 
 ## usage
 

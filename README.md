@@ -20,7 +20,7 @@ POST /graphql
 ```
 - View `/example` directory to see how simple it is to create a graphql server for the serverless framework.
 - Once graphiql is running, you can also make requests via cli:
-```
+```bash
 curl -X POST \
 -H "Content-Type: application/json" \
 -d '{"query": "{ hello }"}' \

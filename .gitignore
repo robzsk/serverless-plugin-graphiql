@@ -1,0 +1,4 @@
+node_modules
+.trash
+npm-debug.log
+.DS_Store

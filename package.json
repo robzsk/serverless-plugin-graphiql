@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-graphiql",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Runs a local http server for graphiql and your graphql handler",
   "main": "plugin.js",
   "scripts": {

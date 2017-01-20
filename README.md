@@ -8,17 +8,17 @@
 https://img.shields.io/npm/v/serverless-plugin-graphiql.svg)](https://www.npmjs.com/package/serverless-plugin-graphiql)
 
 
-## usage
+## Usage
 See `/example` directory to see how easily it's done!  
 
 **Steps**  
-1. Create a lambda function named graphql that implements a graphql server
-2. Add `graphiql` to serverless plugins array
-3. Run `sls graphiql` command from root of serverless project
-4. Visit `localhost:8000/graphql` to view graphiql in browser
+1. Create a lambda function named graphql that implements a graphql server  
+2. Add `graphiql` to serverless plugins array  
+3. Run `sls graphiql` command from root of serverless project  
+4. Visit `localhost:8000/graphql` to view graphiql in browser  
 
 
-## about
+## About
 
 - This plugin creates two endpoints:  
 ```

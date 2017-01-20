@@ -15,17 +15,15 @@
     "aws-event-mocks": "github:serverless/aws-event-mocks"
   },
   "devDependencies": {
-    "serverless": "^1.5.0",
-    "graphql": "^0.8.2",
-    "tap": "^6.3.2"
-  },
-  "optionalDependencies": {
     "babel-eslint": "^6.1.2",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-config-gritcode": "github:gritcode/module-eslint-config-gritcode",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-react": "^6.9.0",
+    "serverless": "^1.5.0",
+    "graphql": "^0.8.2",
+    "tap": "^6.3.2"
   }
 }

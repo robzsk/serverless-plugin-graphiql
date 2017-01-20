@@ -26,4 +26,4 @@ functions:
     handler: foo/bah.graphql
 
 plugins:
-  - graphiql
+  - serverless-plugin-graphiql

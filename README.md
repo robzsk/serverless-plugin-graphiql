@@ -13,13 +13,12 @@ See `/example` directory to see how easily it's done!
 
 **Steps**  
 1. Create a lambda function named graphql that implements a graphql server  
-2. Add `graphiql` to serverless plugins array  
+2. Add `serverless-plugin-graphiql` to serverless plugins array  
 3. Run `sls graphiql` command from root of serverless project  
 4. Visit `localhost:8000/graphql` to view graphiql in browser  
 
 
-## About
-
+## About  
 - This plugin creates two endpoints:  
 ```
 GET /graphql
@@ -32,3 +31,6 @@ curl -X POST \
 -d '{"query": "{ hello }"}' \
 localhost:8000/graphql
 ```
+
+## Requirements
+- Node.js > v6.0

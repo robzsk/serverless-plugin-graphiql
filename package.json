@@ -4,7 +4,7 @@
   "description": "Runs a local http server for graphiql and your graphql handler",
   "main": "server.js",
   "scripts": {
-    "test": "tap --coverage-report=text-summary --timeout=120 --no-bail test/unit",
+    "test": "tap --cov test/unit",
     "start": "node server.js",
     "debug": "node --inspect --debug-brk server.js"
   },

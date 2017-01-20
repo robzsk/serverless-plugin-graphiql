@@ -1,6 +1,6 @@
 # serverless-plugin-graphiql
 
-> Creates http endpoints for graphql server with graphiql
+> Runs a local http server for graphiql and your graphql handler
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 

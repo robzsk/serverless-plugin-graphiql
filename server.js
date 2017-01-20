@@ -64,11 +64,14 @@ module.exports = {
   start: ({ port = 8000, handler }) => {
     const requestListener = createRequestListener(handler);
     const server = http.createServer(requestListener);
-    server.on('clientError', (err, socket) => {
-      socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
-    });
-    server.listen(port, () => {
-      console.log('Server listening on: %s', port);
+    return new Promise(resolve => {
+      server.on('clientError', (err, socket) => {
+        socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
+      });
+      server.listen(port, () => {
+        console.log('Server listening on: %s', port);
+        resolve(server);
+      });
     });
   },
 };

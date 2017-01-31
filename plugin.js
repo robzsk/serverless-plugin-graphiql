@@ -11,6 +11,10 @@ class MyPlugin {
         usage: 'Creates graphiql server',
         lifecycleEvents: ['start'],
         options: {
+          function: {
+            usage: 'Name of the GraphQL function. Default: graphql',
+            shortcut: 'f',
+          },
           port: {
             usage: 'Port to listen on. Default: 3000',
             shortcut: 'p',
@@ -24,7 +28,8 @@ class MyPlugin {
   }
 
   graphiqlStart() {
-    const fn = this.sls.config.serverless.service.functions.graphql.handler;
+    const fnName = this.options.function || 'graphql';
+    const fn = this.sls.config.serverless.service.functions[fnName].handler;
     const [handler, graphql] = fn.split('.');
     const fullPath = path.join(process.cwd(), handler);
     server.start({

@@ -11,6 +11,10 @@ class MyPlugin {
         usage: 'Creates graphiql server',
         lifecycleEvents: ['start'],
         options: {
+          function: {
+            usage: 'Name of the GraphQL function. Default: graphql',
+            shortcut: 'f',
+          },
           port: {
             usage: 'Port to listen on. Default: 3000',
             shortcut: 'p',

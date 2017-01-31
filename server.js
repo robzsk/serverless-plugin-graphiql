@@ -36,7 +36,7 @@ const createRequestListener = handler => {
 
   const routes = {
     '/graphql': { get, post },
-    '#': () => Promise.resolve({ statusCode: 404, body: 'Not Found' }),
+    '#': () => Promise.resolve({ statusCode: 404, body: 'Not found. Please visit /graphql. ' }),
   };
 
   return (req, res) => {

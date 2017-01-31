@@ -26,7 +26,7 @@ module.exports.graphql = (event, context, callback) => {
   };
   graphql(schema, requestString, root)
     .then(body => callback(null, {
-      headers: { 'Content-Type': 'text/json' },
+      headers: { 'Content-Type': 'application/json; charset=UTF-8' },
       statusCode: 200,
       body: JSON.stringify(body)
     }));

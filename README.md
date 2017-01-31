@@ -32,5 +32,12 @@ curl -X POST \
 localhost:8000/graphql
 ```
 
+## Options  
+```
+--function -f   function name in serverless.yml for graphql handler, Default: graphql
+--port -p       port for local http server to listen on, Default: 8000
+```
+
+
 ## Requirements
 - Node.js > v6.0

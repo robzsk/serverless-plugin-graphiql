@@ -23,7 +23,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-event-mocks": "github:serverless/aws-event-mocks"
+    "aws-event-mocks": "github:serverless/aws-event-mocks",
+    "babel-register": "^6.22.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",

@@ -28,6 +28,10 @@ class MyPlugin {
   }
 
   graphiqlStart() {
+    const babelOptions = ((this.sls.config.serverless.service.custom || {})['graphiql'] || {}).babelOptions;
+    if (babelOptions) {
+      require('babel-register')(babelOptions);
+    }
     const fnName = this.options.function || 'graphql';
     const fn = this.sls.config.serverless.service.functions[fnName].handler;
     const [handler, graphql] = fn.split('.');

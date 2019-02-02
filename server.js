@@ -17,6 +17,26 @@ const getBody = req => new Promise(resolve => {
   req.on('end', () => resolve(body));
 });
 
+// From serverless-offline
+// https://github.com/dherault/serverless-offline
+const listenForTermination = () => {
+  // SIGINT will be usually sent when user presses ctrl+c
+  const waitForSigInt = new Promise(resolve => {
+    process.on('SIGINT', () => resolve('SIGINT'));
+  });
+
+  // SIGTERM is a default termination signal in many cases,
+  // for example when "killing" a subprocess spawned in node
+  // with child_process methods
+  const waitForSigTerm = new Promise(resolve => {
+    process.on('SIGTERM', () => resolve('SIGTERM'));
+  });
+
+  return Promise.race([waitForSigInt, waitForSigTerm]).then(command => {
+    console.log(` Got ${command} signal. Graphiql Halting...`);
+  });
+};
+
 const createRequestListener = handler => {
 
   const post = req => getBody(req).then(body => {
@@ -72,6 +92,7 @@ module.exports = {
         console.log('Server listening on: %s', port);
         resolve(server);
       });
-    });
+    })
+    .then(() => listenForTermination());
   },
 };

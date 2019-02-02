@@ -16,7 +16,7 @@ class MyPlugin {
             shortcut: 'f',
           },
           port: {
-            usage: 'Port to listen on. Default: 3000',
+            usage: 'Port to listen on. Default: 8000',
             shortcut: 'p',
           },
         },
@@ -36,7 +36,7 @@ class MyPlugin {
     const fn = this.sls.config.serverless.service.functions[fnName].handler;
     const [handler, graphql] = fn.split('.');
     const fullPath = path.join(process.cwd(), handler);
-    server.start({
+    return server.start({
       handler: require(fullPath)[graphql],
       port: this.options.port,
     });

@@ -14,10 +14,12 @@ class MyPlugin {
           function: {
             usage: 'Name of the GraphQL function. Default: graphql',
             shortcut: 'f',
+            type: 'string',
           },
           port: {
             usage: 'Port to listen on. Default: 8000',
             shortcut: 'p',
+            type: 'string',
           },
         },
       },
